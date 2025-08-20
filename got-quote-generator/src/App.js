@@ -1,8 +1,6 @@
 import './App.css';
 import QuoteCard from './QuoteCard';
 
-
-
 const gotQuotes = [
   { id: 1, quote: "Der Winter naht.", character: "Ned Stark", epic: true },
   { id: 2, quote: "Ein Lannister begleicht stets seine Schulden.", character: "Tyrion Lannister", epic: false },
