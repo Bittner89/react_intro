@@ -13,6 +13,10 @@ const gotQuotes = [
 ];
 
 
+function handleLike(characterName)  {
+    console.log(`${characterName} Zitat wurde geliked`);
+};
+
 function App() {
   return (
     <div className="App">
@@ -29,7 +33,9 @@ function App() {
             isQuoteEpic={q.epic}
             >
 
-            <button style={{
+            <button 
+            onClick={() => handleLike(q.character)}
+            style={{
               backgroundColor: '#4CAF50',
               color: 'white',
               padding: '8px 15px',
