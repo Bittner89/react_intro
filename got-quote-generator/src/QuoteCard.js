@@ -2,30 +2,31 @@ import React from "react";
 
 const quoteStyle = {
   fontStyle: 'italic',
-  color: '#F8C471',
+  color: '#b80808ff',
   fontSize: '1.5em',
   marginBottom: '10px',
-  borderLeft: '4px solid #F8C471',
+  borderLeft: '4px solid #210177ff',
   paddingLeft: '15px'
 };
 
 const characterStyle = {
   fontSize: '0.8em',
-  color: '#ccc',
+  color: '#030303ff',
   marginTop: '5px',
   display: 'block'
 };
 
 
-function QuoteCard(props) {
+function QuoteCard({quoteText, characterName, isQuoteEpic, children }) {
 
     return (
         <blockquote style={quoteStyle}>
-            "{props.quoteText}"
+            "{quoteText}"
             <footer style={characterStyle}>
-                - {props.characterName}
-                {props.isQuoteEpic && <span style={{ marginLeft: '10px' }}>🌟</span>}
+                - {characterName}
+                {isQuoteEpic && <span style={{ marginLeft: '10px' }}>🌟</span>}
             </footer>
+            {children}
         </blockquote>
     )
 }
