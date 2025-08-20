@@ -1,4 +1,5 @@
 import './App.css';
+import QuoteCard from './QuoteCard';
 
 
 
@@ -38,14 +39,7 @@ function App() {
         <p>Ein Ort für Weisheit (und Sarkasmus) aus Westeros.</p>
       </header>
            <main>
-        {gotQuotes.map(q => (
-              <blockquote key={q.id} style={quoteStyle}>"{q.quote}"
-                <footer style={characterStyle}> 
-                  - {q.character} 
-                  {q.epic && <span style={{ marginLeft: '10px' }}>🌟</span>}
-                </footer>
-              </blockquote>
-        ))}
+              <QuoteCard />
       </main>  
     </div>
   );
